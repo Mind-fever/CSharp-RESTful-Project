@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpresaEnvío</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="backImage"></div>
+    <header id="header">
+        <button id="menuButton" class="menuButton" onclick="toggleMenu()">
+            <div class="buttonDiv1"></div>
+            <div class="buttonDiv2"></div>
+            <div class="buttonDiv3"></div>
+        </button>
+        <nav id="navegacion">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="VerProductos.html">Ver Productos</a></li>
+                <li><a href="ActStockProducto.html">Actualizar Stock</a></li>
+                <li><a href="AsignarViaje.html">Asignación de Viajes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="formulario">
+        <div class="grid">
+            <div class="grid-item">
+                <div class="form-container">
+                    <form id="formRegistroCompra">
+                        <h2>Registro de compra</h2>
+                        <br>
+                        <label for="codigoProducto" class="form-label">Código producto</label>
+                        <input class="form-item" type="number" pattern="[0-9]*" name="codigoProducto" id="codigoProducto" required>
+                        <label for="dniCliente" class="form-label">DNI cliente</label>
+                        <input class="form-item" type="number" pattern="[0-9]*" name="dniCliente" id="dniCliente" required>
+                        <label for="cantidad" class="form-label">Cantidad comprada</label>
+                        <input class="form-item" type="number" pattern="[0-9]*" name="cantidad" id="cantidad" required>
+                        <label for="fechaEsperada" class="form-label">Fecha esperada de entrega</label>
+                        <input class="form-item" type="date" name="fechaEsperada" id="fechaEsperada" required>
+                        <div class="form-buttons">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="form-container">
+                        <h2>Resultados</h2>
+                        <div id="formResponse"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/RegistroCompra.js"></script>
+    </main>
+    <script src="../js/header.js"></script>
+</body>
+</html>
